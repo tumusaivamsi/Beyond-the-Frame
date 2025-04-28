@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Beyond the Frames</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Beyond the Frames</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <img src="images/about.jpg" alt="Photographer" class="about-img">
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>Hi, I'm a passionate photographer capturing moments beyond the frames. Welcome to my world of memories.</p>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery" id="gallery-container">
+      <!-- Photos will be added here automatically -->
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>📞 Phone: +1 234-567-8900</p>
+    <p>📷 <a href="https://www.instagram.com/example" target="_blank">Follow me on Instagram</a></p>
+  </section>
+
+  <script>
+    const galleryContainer = document.getElementById('gallery-container');
+    const photos = [
+      // Add your image filenames here
+      "photo1.jpg",
+      "photo2.jpg",
+      "photo3.jpg"
+    ];
+
+    photos.forEach(photo => {
+      const img = document.createElement('img');
+      img.src = 'images/' + photo;
+      img.alt = 'Photography';
+      galleryContainer.appendChild(img);
+    });
+  </script>
+
+</body>
+</html>
